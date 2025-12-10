@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="title">CyberShield - Complete Protection Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #2a4d8e;
+            --accent: #4a76d9;
+            --light: #f5f7fa;
+            --dark: #333;
+            --bg-light: #f5f7fa;
+            --text-dark: #333;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #17a2b8;
+            --radius: 12px;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        .dark-theme {
+            --light: #121212;
+            --dark: #e0e0e0;
+            --primary: #5e35b1;
+            --secondary: #7e57c2;
+            --accent: #ffb74d;
+            --bg-light: #1e1e1e;
+            --text-dark: #e0e0e0;
+            background-color: var(--light);
+            color: var(--dark)
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        section {
+            padding: 4rem 0
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem
+        }
+
+        p {
+            margin-bottom: 1rem
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center
+        }
+
+        .dark-theme header::before {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23121212" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            color: var(--accent)
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+        }
+
+        .intro {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100
+        }
+
+        .dark-theme nav {
+            background: var(--bg-light);
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1)
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap
+        }
+
+        .nav-links li {
+            margin-left: 2rem
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative
+        }
+
+        .nav-links a:hover {
+            color: var(--accent)
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition)
+        }
+
+        .nav-links a:hover::after {
+            width: 100%
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden
+        }
+
+        .dark-theme .card, .dark-theme .checklist, .dark-theme .threat-level, .dark-theme .step-by-step, .dark-theme .resource-card, .dark-theme .comparison-table, .dark-theme .password-strength-table {
+            background: var(--bg-light);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08);
+            border-left: 4px solid var(--accent)
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent))
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15)
+        }
+
+        .threat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0
+        }
+
+        .protection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0
+        }
+
+        .protection-item {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent)
+        }
+
+        .dark-theme .protection-item {
+            background: var(--bg-light);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08);
+        }
+
+        .protection-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12)
+        }
+
+        .protection-item i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: var(--transition)
+        }
+
+        .protection-item:hover i {
+            transform: scale(1.2)
+        }
+
+        .checklist {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin: 2rem 0
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            cursor: pointer
+        }
+
+        .checklist-item:hover {
+            background: #f8f9fa
+        }
+
+        .dark-theme .checklist-item:hover {
+            background: #282828
+        }
+
+        .checklist-item i {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            width: 30px;
+            text-align: center
+        }
+
+        .checklist-item.checked i {
+            color: var(--success)
+        }
+
+        .checklist-item.unchecked i {
+            color: var(--danger)
+        }
+
+        .threat-level {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin: 2rem 0
+        }
+
+        .threat-meter {
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            overflow: hidden
+        }
+
+        .threat-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease
+        }
+
+        .threat-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem
+        }
+
+        .step-by-step {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow);
+            position: relative
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+            position: relative
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            bottom: -2rem;
+            width: 2px;
+            background: #eaeaea;
+            z-index: 1
+        }
+
+        .dark-theme .step:not(:last-child)::after {
+            background: #333
+        }
+
+        .step-number {
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+            position: relative
+        }
+
+        .step-content {
+            flex: 1
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem 1.5rem 1.5rem 3rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: relative
+        }
+
+        .dark-theme .warning {
+            background: #5a4b16;
+            color: #ffeb3b
+        }
+
+        .warning::before {
+            content: '⚠️';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--warning)
+        }
+
+        .danger-alert {
+            background: #f8d7da;
+            border-left: 4px solid var(--danger);
+            padding: 1.5rem 1.5rem 1.5rem 3rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: relative
+        }
+
+        .dark-theme .danger-alert {
+            background: #5c1f24;
+            color: #f7b733
+        }
+
+        .danger-alert::before {
+            content: '🚫';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1.5rem
+        }
+
+        .tip {
+            background: #d1ecf1;
+            border-left: 4px solid var(--info);
+            padding: 1.5rem 1.5rem 1.5rem 3rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: relative
+        }
+
+        .dark-theme .tip {
+            background: #1e4554;
+            color: #64b5f6
+        }
+
+        .tip::before {
+            content: '💡';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1.5rem
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent)
+        }
+
+        .dark-theme .resource-card {
+            background: var(--bg-light);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12)
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15)
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center
+        }
+
+        .scanner-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: var(--radius);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            box-shadow: var(--shadow)
+        }
+
+        .dark-theme .scanner-container {
+            background: linear-gradient(135deg, #4d3f7f 0%, #685a8f 100%)
+        }
+
+        .scanner-display {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            backdrop-filter: blur(10px)
+        }
+
+        .dark-theme .scanner-display {
+            background: rgba(0, 0, 0, 0.2)
+        }
+
+        .network-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition)
+        }
+
+        .dark-theme .network-item {
+            background: rgba(0, 0, 0, 0.3)
+        }
+
+        .network-item:hover {
+            background: rgba(255, 255, 255, 0.3)
+        }
+
+        .dark-theme .network-item:hover {
+            background: rgba(0, 0, 0, 0.5)
+        }
+
+        .security-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold
+        }
+
+        .secure {
+            background: var(--success)
+        }
+
+        .insecure {
+            background: var(--danger);
+            animation: pulse 2s infinite
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0.7
+            }
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin: 2rem 0
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        .comparison-table th {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem;
+            text-align: left
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef
+        }
+
+        .comparison-table tr:hover {
+            background: #f8f9fa
+        }
+
+        .dark-theme .comparison-table tr:hover {
+            background: #282828
+        }
+
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0
+        }
+
+        .do-section, .dont-section {
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow)
+        }
+
+        .do-section {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)
+        }
+
+        .dark-theme .do-section {
+            background: linear-gradient(135deg, #4c6d1d 0%, #2e8b57 100%);
+            color: white
+        }
+
+        .dont-section {
+            background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
+            color: white
+        }
+
+        .dark-theme .dont-section {
+            background: linear-gradient(135deg, #8b1a1a 0%, #a0522d 100%)
+        }
+
+        .do-dont-item {
+            display: flex;
+            align-items: start;
+            margin: 1rem 0;
+            padding: 0.5rem
+        }
+
+        .do-dont-item i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            flex-shrink: 0
+        }
+
+        .password-strength-table {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+            width: 100%
+        }
+
+        .password-strength-table table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        .password-strength-table th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600
+        }
+
+        .password-strength-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: middle
+        }
+
+        .password-strength-table tr {
+            transition: var(--transition)
+        }
+
+        .password-strength-table tr:hover {
+            background: #f8f9fa
+        }
+
+        .dark-theme .password-strength-table tr:hover {
+            background: #282828
+        }
+
+        .password-example {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--dark)
+        }
+
+        .password-rating {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            min-width: 120px
+        }
+
+        .rating-very-weak {
+            background: #dc3545;
+            color: white;
+            animation: pulse 2s infinite
+        }
+
+        .rating-weak {
+            background: #fd7e14;
+            color: white
+        }
+
+        .rating-medium {
+            background: #ffc107;
+            color: #212529
+        }
+
+        .rating-strong {
+            background: #28a745;
+            color: white
+        }
+
+        .rating-excellent {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            font-weight: bold
+        }
+
+        .time-to-crack {
+            font-weight: bold;
+            font-size: 1.1rem
+        }
+
+        .time-instant {
+            color: #dc3545
+        }
+
+        .time-seconds {
+            color: #fd7e14
+        }
+
+        .time-hours {
+            color: #ffc107
+        }
+
+        .time-years {
+            color: #28a745
+        }
+
+        .time-billions {
+            color: #20c997;
+            font-weight: bold
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000000" fill-opacity="0.1" d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,138.7C960,117,1056,107,1152,112C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent)
+        }
+
+        .footer-links {
+            list-style: none
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition)
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1
+        }
+
+        .settings-control {
+            display: flex;
+            align-items: center
+        }
+
+        .settings-control button {
+            margin-left: 10px;
+            white-space: nowrap;
+            font-size: 0.9rem
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s
+        }
+
+        @media (max-width: 768px) {
+            .threat-grid, .protection-grid, .resources, .do-dont-grid {
+                grid-template-columns: 1fr
+            }
+
+            h1 {
+                font-size: 2.2rem
+            }
+
+            .step {
+                flex-direction: column
+            }
+
+            .step-number {
+                margin-bottom: 1rem;
+                margin-right: 0
+            }
+
+            .step:not(:last-child)::after {
+                display: none
+            }
+
+            .nav-container {
+                flex-direction: column
+            }
+
+            .nav-links {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center
+            }
+
+            .nav-links li {
+                margin: 0.5rem
+            }
+
+            .comparison-table, .password-strength-table {
+                overflow-x: auto
+            }
+
+            .password-strength-table th, .password-strength-table td {
+                padding: 0.8rem;
+                font-size: 0.9rem
+            }
+
+            .password-example {
+                font-size: 0.9rem
+            }
+
+            .password-rating {
+                min-width: 90px;
+                font-size: 0.75rem;
+                padding: 0.4rem 0.6rem
+            }
+
+            .settings-control {
+                margin-top: 1rem
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1 data-translate-key="h1">CyberShield</h1>
+            </div>
+            <p class="intro fade-in" data-translate-key="intro">Advanced protection against cyber threats. Learn how to secure your digital life with our comprehensive security guide.</p>
+            <a href="#protection" class="btn fade-in delay-1" data-translate-key="get_protected">Get Protected Now</a>
+        </div>
+    </header>
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h3 data-translate-key="h1">CyberShield</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#threats" data-translate-key="nav_threats">Threats</a></li>
+                <li><a href="#wifi" data-translate-key="nav_wifi">WiFi Security</a></li>
+                <li><a href="#bluetooth" data-translate-key="nav_bluetooth">Bluetooth</a></li>
+                <li><a href="#passwords" data-translate-key="nav_passwords">Passwords</a></li>
+                <li><a href="#protection" data-translate-key="nav_protection">Protection</a></li>
+                <li><a href="#checklist" data-translate-key="nav_checklist">Checklist</a></li>
+                <li><a href="#resources" data-translate-key="nav_resources">Resources</a></li>
+            </ul>
+            <div class="settings-control">
+                <select id="lang-select" onchange="setLanguage(this.value)" class="btn">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="lv">Latviešu</option>
+                </select>
+                <button id="theme-toggle" class="btn" onclick="toggleTheme()"></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="importance">
+            <div class="card fade-in">
+                <h2 data-translate-key="why_important">Why is Cybersecurity Important?</h2>
+                <p data-translate-key="importance_text">With the development of digital technologies, the number of cyber threats is also increasing. Hackers are constantly looking for vulnerabilities in protection systems to gain access to personal data, financial information, or simply cause harm. Knowledge of cybersecurity basics helps protect yourself from such attacks.</p>
+                <div class="threat-level">
+                    <h3 data-translate-key="threat_level_title">Current Global Threat Level</h3>
+                    <div class="threat-meter">
+                        <div class="threat-fill" style="width: 75%; background: linear-gradient(90deg, #ffc107, #dc3545);"></div>
+                    </div>
+                    <div class="threat-labels">
+                        <span data-translate-key="threat_level_low">Low</span>
+                        <span data-translate-key="threat_level_medium">Medium</span>
+                        <span data-translate-key="threat_level_high">High</span>
+                        <span data-translate-key="threat_level_critical">Critical</span>
+                    </div>
+                    <p data-translate-key="threat_level_desc">The current threat level is <strong>HIGH</strong> due to increased ransomware attacks and phishing campaigns targeting remote workers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="threats">
+            <div class="card fade-in delay-1">
+                <h2 data-translate-key="threats_title">Main Threats on the Internet</h2>
+                <div class="threat-grid">
+                    <div class="card">
+                        <h3><i class="fas fa-fish"></i> <span data-translate-key="threat_phishing_h3">Phishing</span></h3>
+                        <p data-translate-key="threat_phishing_p">Fraudulent emails and websites that mimic legitimate resources to obtain your login credentials.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-virus"></i> <span data-translate-key="threat_malware_h3">Malware</span></h3>
+                        <p data-translate-key="threat_malware_p">Viruses, trojans, spyware, and ransomware that can damage your system or steal data.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-key"></i> <span data-translate-key="threat_passwords_h3">Password Attacks</span></h3>
+                        <p data-translate-key="threat_passwords_p">Using weak passwords or reusing them makes your accounts vulnerable to brute force attacks.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-user-secret"></i> <span data-translate-key="threat_social_h3">Social Engineering</span></h3>
+                        <p data-translate-key="threat_social_p">Manipulating people to obtain confidential information or access to systems.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-wifi"></i> <span data-translate-key="threat_mitm_h3">Man-in-the-Middle</span></h3>
+                        <p data-translate-key="threat_mitm_p">Intercepting communications between two parties on unsecured networks like public WiFi.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-broadcast-tower"></i> <span data-translate-key="threat_rogue_h3">Rogue Access Points</span></h3>
+                        <p data-translate-key="threat_rogue_p">Fake WiFi hotspots designed to steal your data when you connect to them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wifi">
+            <div class="card fade-in delay-2">
+                <h2 data-translate-key="wifi_title"><i class="fas fa-wifi"></i> Public WiFi Security: The Hidden Dangers</h2>
+                <p data-translate-key="wifi_intro">Public WiFi networks are one of the most dangerous places for your digital security. Learn why you should be extremely careful when connecting to free WiFi.</p>
+                <div class="danger-alert">
+                    <h3 data-translate-key="danger_alert_h3">⚠️ DANGER: Free Public WiFi Networks</h3>
+                    <p data-translate-key="danger_alert_p"><strong>NEVER connect to free public WiFi without proper protection!</strong> Hackers can easily intercept your data, steal passwords, credit card information, and monitor all your online activity.</p>
+                </div>
+                <div class="scanner-container">
+                    <h3 data-translate-key="scanner_h3"><i class="fas fa-search"></i> WiFi Network Scanner</h3>
+                    <p data-translate-key="scanner_p">Simulated scan of nearby networks showing their security status:</p>
+                    <div class="scanner-display" id="wifi-scanner">
+                        <div class="network-item">
+                            <div>
+                                <strong data-translate-key="net_free_airport"><i class="fas fa-wifi"></i> "Free Airport WiFi"</strong>
+                                <div data-translate-key="signal_security_none">Signal: Strong • Security: None</div>
+                            </div>
+                            <span class="security-badge insecure" data-translate-key="badge_dangerous">⚠️ DANGEROUS</span>
+                        </div>
+                        <div class="network-item">
+                            <div>
+                                <strong data-translate-key="net_starbucks"><i class="fas fa-wifi"></i> "Starbucks Guest"</strong>
+                                <div data-translate-key="signal_security_none">Signal: Strong • Security: None</div>
+                            </div>
+                            <span class="security-badge insecure" data-translate-key="badge_dangerous">⚠️ DANGEROUS</span>
+                        </div>
+                        <div class="network-item">
+                            <div>
+                                <strong data-translate-key="net_hotel"><i class="fas fa-wifi"></i> "Hotel_Free_WiFi"</strong>
+                                <div data-translate-key="signal_security_none">Signal: Medium • Security: None</div>
+                            </div>
+                            <span class="security-badge insecure" data-translate-key="badge_dangerous">⚠️ DANGEROUS</span>
+                        </div>
+                        <div class="network-item">
+                            <div>
+                                <strong data-translate-key="net_home"><i class="fas fa-lock"></i> "MyHomeNetwork"</strong>
+                                <div data-translate-key="signal_security_wpa3">Signal: Strong • Security: WPA3</div>
+                            </div>
+                            <span class="security-badge secure" data-translate-key="badge_secure">✓ SECURE</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-block" onclick="scanNetworks()" data-translate-key="scan_again">Scan Again</button>
+                </div>
+                <h3 data-translate-key="wifi_threats_h3">What Can Happen on Public WiFi?</h3>
+                <div class="threat-grid">
+                    <div class="card">
+                        <h4 data-translate-key="wifi_threat_data_h4"><i class="fas fa-user-secret"></i> Data Interception</h4>
+                        <p data-translate-key="wifi_threat_data_p">Hackers can see everything you do: websites visited, passwords entered, messages sent.</p>
+                    </div>
+                    <div class="card">
+                        <h4 data-translate-key="wifi_threat_financial_h4"><i class="fas fa-credit-card"></i> Financial Theft</h4>
+                        <p data-translate-key="wifi_threat_financial_p">Banking credentials and credit card numbers can be stolen if you access financial sites.</p>
+                    </div>
+                    <div class="card">
+                        <h4 data-translate-key="wifi_threat_malware_h4"><i class="fas fa-virus"></i> Malware Injection</h4>
+                        <p data-translate-key="wifi_threat_malware_p">Attackers can inject malware into your device through the compromised network.</p>
+                    </div>
+                    <div class="card">
+                        <h4 data-translate-key="wifi_threat_session_h4"><i class="fas fa-eye"></i> Session Hijacking</h4>
+                        <p data-translate-key="wifi_threat_session_p">Your active sessions can be stolen, giving hackers access to your accounts.</p>
+                    </div>
+                    <div class="card">
+                        <h4 data-translate-key="wifi_dos_h4"><i class="fas fa-times-circle"></i> Denial of Service (DoS)</h4>
+                        <p data-translate-key="wifi_dos_p">An attacker can flood the network, causing a Denial of Service for all connected users.</p>
+                    </div>
+                </div>
+                <div class="do-dont-grid">
+                    <div class="do-section">
+                        <h3 data-translate-key="dos_do_h3"><i class="fas fa-check-circle"></i> DO's for WiFi Security</h3>
+                        <div class="do-dont-item"><i class="fas fa-check"></i>
+                            <div data-translate-key="dos_do_vpn"><strong>Use a VPN</strong> - Always connect through a trusted VPN service</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-check"></i>
+                            <div data-translate-key="dos_do_verify"><strong>Verify Network Names</strong> - Confirm with staff the official network name</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-check"></i>
+                            <div data-translate-key="dos_do_https"><strong>Use HTTPS</strong> - Only visit websites with HTTPS encryption</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-check"></i>
+                            <div data-translate-key="dos_do_share"><strong>Turn Off Sharing</strong> - Disable file sharing and AirDrop</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-check"></i>
+                            <div data-translate-key="dos_do_mobile"><strong>Use Mobile Data</strong> - When possible, use your cellular connection instead</div>
+                        </div>
+                    </div>
+                    <div class="dont-section">
+                        <h3 data-translate-key="dos_dont_h3"><i class="fas fa-times-circle"></i> DON'Ts for WiFi Security</h3>
+                        <div class="do-dont-item"><i class="fas fa-times"></i>
+                            <div data-translate-key="dos_dont_banking"><strong>Banking Transactions</strong> - Never access banking or financial sites</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-times"></i>
+                            <div data-translate-key="dos_dont_auto"><strong>Auto-Connect</strong> - Don't enable automatic WiFi connection</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-times"></i>
+                            <div data-translate-key="dos_dont_sensitive"><strong>Sensitive Data</strong> - Don't enter passwords or personal information</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-times"></i>
+                            <div data-translate-key="dos_dont_stay"><strong>Stay Connected</strong> - Disconnect immediately after use</div>
+                        </div>
+                        <div class="do-dont-item"><i class="fas fa-times"></i>
+                            <div data-translate-key="dos_dont_updates"><strong>Software Updates</strong> - Don't install updates or apps over public WiFi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bluetooth">
+            <div class="card fade-in delay-2">
+                <h2 data-translate-key="bluetooth_title"><i class="fab fa-bluetooth-b"></i> Bluetooth Security: How to Protect Devices</h2>
+                <p data-translate-key="bluetooth_p1">Bluetooth is convenient, but it opens another entry point for attackers if not configured correctly. These are the basic rules for protection:</p>
+                <div class="step-by-step">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 data-translate-key="bluetooth_item1"><strong>Keep Bluetooth Off</strong> - Turn off Bluetooth when you are not actively using it.</h4>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4 data-translate-key="bluetooth_item2"><strong>Use Secure Pairing</strong> - Always verify the pairing code on both devices.</h4>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4 data-translate-key="bluetooth_item3"><strong>Disable Discovery</strong> - Set your device to non-discoverable mode in public places.</h4>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4 data-translate-key="bluetooth_item4"><strong>Keep Software Updated</strong> - Install the latest updates to fix known security flaws.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tip">
+                    <h4 data-translate-key="pass_tip_h4">Key Tip:</h4>
+                    <p data-translate-key="bluetooth_tip_p">Older Bluetooth standards (v2.0) are less secure than modern ones (v4.0+). Always use the latest device technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="passwords">
+            <div class="card fade-in delay-3">
+                <h2 data-translate-key="passwords_title"><i class="fas fa-lock"></i> Password Fortress: Creating Strong Credentials</h2>
+                <p data-translate-key="passwords_intro">Your password is the first line of defense. Use complex, unique phrases for every service.</p>
+                <div class="password-strength-table">
+                    <h4 data-translate-key="passwords_table_h4" style="padding:1rem;">Password Strength Comparison</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-translate-key="pass_col1">Strength</th>
+                                <th data-translate-key="pass_col2">Example</th>
+                                <th data-translate-key="pass_col3">Time to Crack (Modern GPU)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="password-rating rating-very-weak" data-translate-key="pass_very_weak">Very Weak</span></td>
+                                <td class="password-example" data-translate-key="pass_ex1">123456</td>
+                                <td><span class="time-to-crack time-instant" data-translate-key="time_instant">Instant</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="password-rating rating-weak" data-translate-key="pass_weak">Weak</span></td>
+                                <td class="password-example" data-translate-key="pass_ex2">password123</td>
+                                <td><span class="time-to-crack time-seconds" data-translate-key="time_seconds">2 seconds</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="password-rating rating-medium" data-translate-key="pass_medium">Medium</span></td>
+                                <td class="password-example" data-translate-key="pass_ex3">MyDogIsBlack</td>
+                                <td><span class="time-to-crack time-hours" data-translate-key="time_hours">3 hours</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="password-rating rating-strong" data-translate-key="pass_strong">Strong</span></td>
+                                <td class="password-example" data-translate-key="pass_ex4">M3d1umP@ssw0rd!</td>
+                                <td><span class="time-to-crack time-years" data-translate-key="time_years">400 years</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="password-rating rating-excellent" data-translate-key="pass_excellent">Excellent</span></td>
+                                <td class="password-example" data-translate-key="pass_ex5">Th1sIsAnUnbr3@kablePhraze!&7</td>
+                                <td><span class="time-to-crack time-billions" data-translate-key="time_billions">Billions of years</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tip">
+                    <h4 data-translate-key="pass_tip_h4">Key Tip:</h4>
+                    <p data-translate-key="pass_tip_p">Use a reliable <strong>Password Manager</strong> (like LastPass or 1Password) to generate and store long, complex, and unique passwords for all your accounts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="protection">
+            <div class="card fade-in delay-1">
+                <h2 data-translate-key="protection_title"><i class="fas fa-bullseye"></i> Your Cyber Protection Strategy</h2>
+                <p data-translate-key="protection_intro">A multi-layered defense is essential to ensure maximum security.</p>
+                <div class="protection-grid">
+                    <div class="protection-item">
+                        <i class="fas fa-user-lock"></i>
+                        <h4 data-translate-key="protection_item1_h4">Multi-Factor Authentication (MFA)</h4>
+                        <p data-translate-key="protection_item1_p">Use a second verification factor (code via app or SMS) on all important accounts.</p>
+                    </div>
+                    <div class="protection-item">
+                        <i class="fas fa-firewall"></i>
+                        <h4 data-translate-key="protection_item2_h4">Antivirus and Firewall</h4>
+                        <p data-translate-key="protection_item2_p">Maintain up-to-date antivirus software and an active firewall on all devices.</p>
+                    </div>
+                    <div class="protection-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <h4 data-translate-key="protection_item3_h4">System Updates</h4>
+                        <p data-translate-key="protection_item3_p">Install operating system and application updates immediately to close security holes.</p>
+                    </div>
+                    <div class="protection-item">
+                        <i class="fas fa-hdd"></i>
+                        <h4 data-translate-key="protection_item4_h4">Data Backup</h4>
+                        <p data-translate-key="protection_item4_p">Regularly back up important files to an external or cloud drive.</p>
+                    </div>
+                    <div class="protection-item">
+                        <i class="fas fa-globe"></i>
+                        <h4 data-translate-key="protection_item5_h4">VPN Usage</h4>
+                        <p data-translate-key="protection_item5_p">Use a Virtual Private Network (VPN) for encrypting traffic, especially on public networks.</p>
+                    </div>
+                    <div class="protection-item">
+                        <i class="fas fa-lock"></i>
+                        <h4 data-translate-key="protection_item6_h4">Encryption</h4>
+                        <p data-translate-key="protection_item6_p">Encrypt your device drives (e.g., BitLocker or FileVault) to protect data in case of loss or theft.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist">
+            <div class="checklist fade-in delay-2">
+                <h2 data-translate-key="checklist_title"><i class="fas fa-clipboard-check"></i> Your Personal Security Checklist</h2>
+                <p data-translate-key="checklist_intro">Verify that you have taken these essential steps to secure your digital life:</p>
+                <div id="security-checklist">
+                    <div class="checklist-item unchecked" onclick="toggleCheck(this)"><i class="fas fa-times-circle"></i><span data-translate-key="checklist_item1">Multi-factor authentication enabled on email and banking?</span></div>
+                    <div class="checklist-item unchecked" onclick="toggleCheck(this)"><i class="fas fa-times-circle"></i><span data-translate-key="checklist_item2">Antivirus definitions updated this week?</span></div>
+                    <div class="checklist-item unchecked" onclick="toggleCheck(this)"><i class="fas fa-times-circle"></i><span data-translate-key="checklist_item3">Operating system fully updated?</span></div>
+                    <div class="checklist-item unchecked" onclick="toggleCheck(this)"><i class="fas fa-times-circle"></i><span data-translate-key="checklist_item4">All important files backed up externally?</span></div>
+                    <div class="checklist-item unchecked" onclick="toggleCheck(this)"><i class="fas fa-times-circle"></i><span data-translate-key="checklist_item5">Do not reuse passwords?</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources">
+            <div class="card fade-in delay-3">
+                <h2 data-translate-key="resources_title"><i class="fas fa-tools"></i> Useful Resources and Tools</h2>
+                <p data-translate-key="resources_intro">Find reliable resources to strengthen your security:</p>
+                <div class="resources">
+                    <div class="resource-card">
+                        <i class="fas fa-cloud-download-alt resource-icon"></i>
+                        <h4 data-translate-key="resource1_h4">VPN Recommendations</h4>
+                        <p data-translate-key="resource1_p">A list of top-rated VPN services for anonymous browsing and data encryption.</p>
+                        <a href="#" class="btn btn-block" data-translate-key="resource_link1">View List</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-book-open resource-icon"></i>
+                        <h4 data-translate-key="resource2_h4">Phishing Test</h4>
+                        <p data-translate-key="resource2_p">Test your knowledge and ability to recognize phishing emails with an online simulation.</p>
+                        <a href="#" class="btn btn-block" data-translate-key="resource_link2">Start Test</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-user-shield resource-icon"></i>
+                        <h4 data-translate-key="resource3_h4">Password Managers</h4>
+                        <p data-translate-key="resource3_p">Tools for securely generating and storing complex, unique passwords.</p>
+                        <a href="#" class="btn btn-block" data-translate-key="resource_link3">Compare Managers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-shield-alt"></i> CyberShield</h3>
+                <p data-translate-key="footer_mission">Our mission is to empower individuals with the knowledge to defend their digital lives against evolving cyber threats.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate-key="footer_sections">Sections</h3>
+                <ul class="footer-links">
+                    <li><a href="#threats" data-translate-key="nav_threats">Threats</a></li>
+                    <li><a href="#wifi" data-translate-key="nav_wifi">WiFi Security</a></li>
+                    <li><a href="#passwords" data-translate-key="nav_passwords">Passwords</a></li>
+                    <li><a href="#protection" data-translate-key="nav_protection">Protection</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate-key="footer_contact">Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> info@cybershield.com</li>
+                    <li><i class="fas fa-phone"></i> +1 800-555-SAFE</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Digital Fortress, Cyberspace</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 CyberShield. All Rights Reserved. | <span data-translate-key="disclaimer">Disclaimer</span></p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            'en': {
+                'title': 'CyberShield - Complete Protection Guide',
+                'h1': 'CyberShield',
+                'intro': 'Advanced protection against cyber threats. Learn how to secure your digital life with our comprehensive security guide.',
+                'get_protected': 'Get Protected Now',
+                'nav_threats': 'Threats',
+                'nav_wifi': 'WiFi Security',
+                'nav_bluetooth': 'Bluetooth',
+                'nav_passwords': 'Passwords',
+                'nav_protection': 'Protection',
+                'nav_checklist': 'Checklist',
+                'nav_resources': 'Resources',
+                'why_important': 'Why is Cybersecurity Important?',
+                'importance_text': 'With the development of digital technologies, the number of cyber threats is also increasing. Hackers are constantly looking for vulnerabilities in protection systems to gain access to personal data, financial information, or simply cause harm. Knowledge of cybersecurity basics helps protect yourself from such attacks.',
+                'threat_level_title': 'Current Global Threat Level',
+                'threat_level_low': 'Low',
+                'threat_level_medium': 'Medium',
+                'threat_level_high': 'High',
+                'threat_level_critical': 'Critical',
+                'threat_level_desc': 'The current threat level is <strong>HIGH</strong> due to increased ransomware attacks and phishing campaigns targeting remote workers.',
+                'threats_title': 'Main Threats on the Internet',
+                'threat_phishing_h3': 'Phishing',
+                'threat_phishing_p': 'Fraudulent emails and websites that mimic legitimate resources to obtain your login credentials.',
+                'threat_malware_h3': 'Malware',
+                'threat_malware_p': 'Viruses, trojans, spyware, and ransomware that can damage your system or steal data.',
+                'threat_passwords_h3': 'Password Attacks',
+                'threat_passwords_p': 'Using weak passwords or reusing them makes your accounts vulnerable to brute force attacks.',
+                'threat_social_h3': 'Social Engineering',
+                'threat_social_p': 'Manipulating people to obtain confidential information or access to systems.',
+                'threat_mitm_h3': 'Man-in-the-Middle',
+                'threat_mitm_p': 'Intercepting communications between two parties on unsecured networks like public WiFi.',
+                'threat_rogue_h3': 'Rogue Access Points',
+                'threat_rogue_p': 'Fake WiFi hotspots designed to steal your data when you connect to them.',
+                'wifi_title': 'Public WiFi Security: The Hidden Dangers',
+                'wifi_intro': 'Public WiFi networks are one of the most dangerous places for your digital security. Learn why you should be extremely careful when connecting to free WiFi.',
+                'danger_alert_h3': '⚠️ DANGER: Free Public WiFi Networks',
+                'danger_alert_p': '<strong>NEVER connect to free public WiFi without proper protection!</strong> Hackers can easily intercept your data, steal passwords, credit card information, and monitor all your online activity.',
+                'scanner_h3': 'WiFi Network Scanner',
+                'scanner_p': 'Simulated scan of nearby networks showing their security status:',
+                'net_free_airport': '"Free Airport WiFi"',
+                'net_starbucks': '"Starbucks Guest"',
+                'net_hotel': '"Hotel_Free_WiFi"',
+                'net_home': '"MyHomeNetwork"',
+                'signal_security_none': 'Signal: Strong • Security: None',
+                'signal_security_wpa3': 'Signal: Strong • Security: WPA3',
+                'badge_dangerous': '⚠️ DANGEROUS',
+                'badge_secure': '✓ SECURE',
+                'scan_again': 'Scan Again',
+                'wifi_threats_h3': 'What Can Happen on Public WiFi?',
+                'wifi_threat_data_h4': 'Data Interception',
+                'wifi_threat_data_p': 'Hackers can see everything you do: websites visited, passwords entered, messages sent.',
+                'wifi_threat_financial_h4': 'Financial Theft',
+                'wifi_threat_financial_p': 'Banking credentials and credit card numbers can be stolen if you access financial sites.',
+                'wifi_threat_malware_h4': 'Malware Injection',
+                'wifi_threat_malware_p': 'Attackers can inject malware into your device through the compromised network.',
+                'wifi_threat_session_h4': 'Session Hijacking',
+                'wifi_threat_session_p': 'Your active sessions can be stolen, giving hackers access to your accounts.',
+                'wifi_dos_h4': 'Denial of Service (DoS)',
+                'wifi_dos_p': 'An attacker can flood the network, causing a Denial of Service for all connected users.',
+                'dos_do_h3': 'DO\'s for WiFi Security',
+                'dos_do_vpn': '<strong>Use a VPN</strong> - Always connect through a trusted VPN service',
+                'dos_do_verify': '<strong>Verify Network Names</strong> - Confirm with staff the official network name',
+                'dos_do_https': '<strong>Use HTTPS</strong> - Only visit websites with HTTPS encryption',
+                'dos_do_share': '<strong>Turn Off Sharing</strong> - Disable file sharing and AirDrop',
+                'dos_do_mobile': '<strong>Use Mobile Data</strong> - When possible, use your cellular connection instead',
+                'dos_dont_h3': 'DON\'Ts for WiFi Security',
+                'dos_dont_banking': '<strong>Banking Transactions</strong> - Never access banking or financial sites',
+                'dos_dont_auto': '<strong>Auto-Connect</strong> - Don\'t enable automatic WiFi connection',
+                'dos_dont_sensitive': '<strong>Sensitive Data</strong> - Don\'t enter passwords or personal information',
+                'dos_dont_stay': '<strong>Stay Connected</strong> - Disconnect immediately after use',
+                'dos_dont_updates': '<strong>Software Updates</strong> - Don\'t install updates or apps over public WiFi',
+                'bluetooth_title': 'Bluetooth Security: How to Protect Devices',
+                'bluetooth_p1': 'Bluetooth is convenient, but it opens another entry point for attackers if not configured correctly. These are the basic rules for protection:',
+                'bluetooth_item1': '<strong>Keep Bluetooth Off</strong> - Turn off Bluetooth when you are not actively using it.',
+                'bluetooth_item2': '<strong>Use Secure Pairing</strong> - Always verify the pairing code on both devices.',
+                'bluetooth_item3': '<strong>Disable Discovery</strong> - Set your device to non-discoverable mode in public places.',
+                'bluetooth_item4': '<strong>Keep Software Updated</strong> - Install the latest updates to fix known security flaws.',
+                'bluetooth_tip_p': 'Older Bluetooth standards (v2.0) are less secure than modern ones (v4.0+). Always use the latest device technology.',
+                'passwords_title': 'Password Fortress: Creating Strong Credentials',
+                'passwords_intro': 'Your password is the first line of defense. Use complex, unique phrases for every service.',
+                'passwords_table_h4': 'Password Strength Comparison',
+                'pass_col1': 'Strength',
+                'pass_col2': 'Example',
+                'pass_col3': 'Time to Crack (Modern GPU)',
+                'pass_very_weak': 'Very Weak',
+                'pass_weak': 'Weak',
+                'pass_medium': 'Medium',
+                'pass_strong': 'Strong',
+                'pass_excellent': 'Excellent',
+                'pass_ex1': '123456',
+                'pass_ex2': 'password123',
+                'pass_ex3': 'MyDogIsBlack',
+                'pass_ex4': 'M3d1umP@ssw0rd!',
+                'pass_ex5': 'Th1sIsAnUnbr3@kablePhraze!&7',
+                'time_instant': 'Instant',
+                'time_seconds': '2 seconds',
+                'time_hours': '3 hours',
+                'time_years': '400 years',
+                'time_billions': 'Billions of years',
+                'pass_tip_h4': 'Key Tip:',
+                'pass_tip_p': 'Use a reliable <strong>Password Manager</strong> (like LastPass or 1Password) to generate and store long, complex, and unique passwords for all your accounts.',
+                'protection_title': 'Your Cyber Protection Strategy',
+                'protection_intro': 'A multi-layered defense is essential to ensure maximum security.',
+                'protection_item1_h4': 'Multi-Factor Authentication (MFA)',
+                'protection_item1_p': 'Use a second verification factor (code via app or SMS) on all important accounts.',
+                'protection_item2_h4': 'Antivirus and Firewall',
+                'protection_item2_p': 'Maintain up-to-date antivirus software and an active firewall on all devices.',
+                'protection_item3_h4': 'System Updates',
+                'protection_item3_p': 'Install operating system and application updates immediately to close security holes.',
+                'protection_item4_h4': 'Data Backup',
+                'protection_item4_p': 'Regularly back up important files to an external or cloud drive.',
+                'protection_item5_h4': 'VPN Usage',
+                'protection_item5_p': 'Use a Virtual Private Network (VPN) for encrypting traffic, especially on public networks.',
+                'protection_item6_h4': 'Encryption',
+                'protection_item6_p': 'Encrypt your device drives (e.g., BitLocker or FileVault) to protect data in case of loss or theft.',
+                'checklist_title': 'Your Personal Security Checklist',
+                'checklist_intro': 'Verify that you have taken these essential steps to secure your digital life:',
+                'checklist_item1': 'Multi-factor authentication enabled on email and banking?',
+                'checklist_item2': 'Antivirus definitions updated this week?',
+                'checklist_item3': 'Operating system fully updated?',
+                'checklist_item4': 'All important files backed up externally?',
+                'checklist_item5': 'Do not reuse passwords?',
+                'resources_title': 'Useful Resources and Tools',
+                'resources_intro': 'Find reliable resources to strengthen your security:',
+                'resource1_h4': 'VPN Recommendations',
+                'resource1_p': 'A list of top-rated VPN services for anonymous browsing and data encryption.',
+                'resource_link1': 'View List',
+                'resource2_h4': 'Phishing Test',
+                'resource2_p': 'Test your knowledge and ability to recognize phishing emails with an online simulation.',
+                'resource_link2': 'Start Test',
+                'resource3_h4': 'Password Managers',
+                'resource3_p': 'Tools for securely generating and storing complex, unique passwords.',
+                'resource_link3': 'Compare Managers',
+                'footer_mission': 'Our mission is to empower individuals with the knowledge to defend their digital lives against evolving cyber threats.',
+                'footer_sections': 'Sections',
+                'footer_contact': 'Contact',
+                'disclaimer': 'Disclaimer'
+            },
+            'ru': {
+                'title': 'CyberShield - Полное руководство по защите',
+                'h1': 'CyberShield',
+                'intro': 'Продвинутая защита от киберугроз. Узнайте, как обезопасить свою цифровую жизнь с помощью нашего всеобъемлющего руководства по безопасности.',
+                'get_protected': 'Получить Защиту Сейчас',
+                'nav_threats': 'Угрозы',
+                'nav_wifi': 'Безопасность WiFi',
+                'nav_bluetooth': 'Bluetooth',
+                'nav_passwords': 'Пароли',
+                'nav_protection': 'Защита',
+                'nav_checklist': 'Чек-лист',
+                'nav_resources': 'Ресурсы',
+                'why_important': 'Почему кибербезопасность важна?',
+                'importance_text': 'С развитием цифровых технологий растет и число киберугроз. Хакеры постоянно ищут уязвимости в системах защиты, чтобы получить доступ к личным данным, финансовой информации или просто нанести вред. Знание основ кибербезопасности помогает защититься от подобных атак.',
+                'threat_level_title': 'Текущий глобальный уровень угрозы',
+                'threat_level_low': 'Низкий',
+                'threat_level_medium': 'Средний',
+                'threat_level_high': 'Высокий',
+                'threat_level_critical': 'Критический',
+                'threat_level_desc': 'Текущий уровень угрозы - <strong>ВЫСОКИЙ</strong> из-за участившихся атак программ-вымогателей и фишинговых кампаний, нацеленных на удаленных сотрудников.',
+                'threats_title': 'Основные угрозы в Интернете',
+                'threat_phishing_h3': 'Фишинг',
+                'threat_phishing_p': 'Мошеннические электронные письма и веб-сайты, имитирующие законные ресурсы для получения ваших учетных данных.',
+                'threat_malware_h3': 'Вредоносное ПО',
+                'threat_malware_p': 'Вирусы, трояны, шпионское ПО и программы-вымогатели, которые могут повредить вашу систему или украсть данные.',
+                'threat_passwords_h3': 'Атаки на пароли',
+                'threat_passwords_p': 'Использование слабых или повторяющихся паролей делает ваши учетные записи уязвимыми для атак методом подбора (Brute Force).',
+                'threat_social_h3': 'Социальная инженерия',
+                'threat_social_p': 'Манипулирование людьми для получения конфиденциальной информации или доступа к системам.',
+                'threat_mitm_h3': 'Атака "Человек посередине"',
+                'threat_mitm_p': 'Перехват сообщений между двумя сторонами в незащищенных сетях, таких как общедоступный WiFi.',
+                'threat_rogue_h3': 'Поддельные Точки Доступа',
+                'threat_rogue_p': 'Фальшивые точки доступа Wi-Fi, предназначенные для кражи ваших данных при подключении к ним.',
+                'wifi_title': 'Безопасность Общественного WiFi: Скрытые Опасности',
+                'wifi_intro': 'Общественные сети Wi-Fi являются одними из самых опасных мест для вашей цифровой безопасности. Узнайте, почему вы должны быть предельно осторожны при подключении к бесплатному Wi-Fi.',
+                'danger_alert_h3': '⚠️ ОПАСНОСТЬ: Бесплатные Общественные Сети WiFi',
+                'danger_alert_p': '<strong>НИКОГДА не подключайтесь к бесплатному общедоступному Wi-Fi без надлежащей защиты!</strong> Хакеры могут легко перехватить ваши данные, украсть пароли, информацию о кредитных картах и отслеживать всю вашу онлайн-активность.',
+                'scanner_h3': 'Сканер Сетей WiFi',
+                'scanner_p': 'Имитация сканирования ближайших сетей с отображением их статуса безопасности:',
+                'net_free_airport': '"Бесплатный WiFi в Аэропорту"',
+                'net_starbucks': '"Гость Старбакс"',
+                'net_hotel': '"Отель_Бесплатный_WiFi"',
+                'net_home': '"МояДомашняяСеть"',
+                'signal_security_none': 'Сигнал: Сильный • Защита: Нет',
+                'signal_security_wpa3': 'Сигнал: Сильный • Защита: WPA3',
+                'badge_dangerous': '⚠️ ОПАСНО',
+                'badge_secure': '✓ ЗАЩИЩЕНО',
+                'scan_again': 'Сканировать Снова',
+                'wifi_threats_h3': 'Что может произойти в общественном WiFi?',
+                'wifi_threat_data_h4': 'Перехват Данных',
+                'wifi_threat_data_p': 'Хакеры могут видеть все, что вы делаете: посещенные сайты, введенные пароли, отправленные сообщения.',
+                'wifi_threat_financial_h4': 'Финансовое Мошенничество',
+                'wifi_threat_financial_p': 'Банковские данные и номера кредитных карт могут быть украдены, если вы заходите на финансовые сайты.',
+                'wifi_threat_malware_h4': 'Внедрение Вредоносного ПО',
+                'wifi_threat_malware_p': 'Злоумышленники могут внедрить вредоносное ПО в ваше устройство через скомпрометированную сеть.',
+                'wifi_threat_session_h4': 'Перехват Сеанса (Session Hijacking)',
+                'wifi_threat_session_p': 'Ваши активные сеансы могут быть украдены, что даст хакерам доступ к вашим учетным записям.',
+                'wifi_dos_h4': 'Отказ в Обслуживании (DoS)',
+                'wifi_dos_p': 'Злоумышленник может перегрузить сеть, вызвав Отказ в Обслуживании для всех подключенных пользователей.',
+                'dos_do_h3': 'РЕКОМЕНДАЦИИ по Безопасности WiFi',
+                'dos_do_vpn': '<strong>Используйте VPN</strong> - Всегда подключайтесь через доверенный VPN-сервис',
+                'dos_do_verify': '<strong>Проверяйте Названия Сетей</strong> - Уточните у персонала официальное название сети',
+                'dos_do_https': '<strong>Используйте HTTPS</strong> - Посещайте только веб-сайты с шифрованием HTTPS',
+                'dos_do_share': '<strong>Отключите Общий Доступ</strong> - Отключите общий доступ к файлам и AirDrop',
+                'dos_do_mobile': '<strong>Используйте Мобильные Данные</strong> - По возможности используйте свое сотовое соединение',
+                'dos_dont_h3': 'ЗАПРЕТЫ в Безопасности WiFi',
+                'dos_dont_banking': '<strong>Банковские Операции</strong> - Никогда не заходите на банковские или финансовые сайты',
+                'dos_dont_auto': '<strong>Автоматическое Подключение</strong> - Не включайте автоматическое подключение к Wi-Fi',
+                'dos_dont_sensitive': '<strong>Конфиденциальные Данные</strong> - Не вводите пароли или личную информацию',
+                'dos_dont_stay': '<strong>Оставаться Подключенным</strong> - Немедленно отключайтесь после использования',
+                'dos_dont_updates': '<strong>Обновления ПО</strong> - Не устанавливайте обновления или приложения через общедоступный Wi-Fi',
+                'bluetooth_title': 'Безопасность Bluetooth: Как Защитить Устройства',
+                'bluetooth_p1': 'Bluetooth удобен, но он открывает еще одну точку входа для злоумышленников, если настроен неправильно. Вот основные правила защиты:',
+                'bluetooth_item1': '<strong>Держите Bluetooth Выключенным</strong> - Выключайте Bluetooth, когда активно его не используете.',
+                'bluetooth_item2': '<strong>Используйте Безопасное Сопряжение</strong> - Всегда проверяйте код сопряжения на обоих устройствах.',
+                'bluetooth_item3': '<strong>Отключите Обнаружение</strong> - Установите свое устройство в режим необнаруживаемости в общественных местах.',
+                'bluetooth_item4': '<strong>Обновляйте ПО</strong> - Установите последние обновления, чтобы устранить известные уязвимости безопасности.',
+                'bluetooth_tip_p': 'Старые стандарты Bluetooth (v2.0) менее безопасны, чем современные (v4.0+). Всегда используйте новейшие технологии устройств.',
+                'passwords_title': 'Крепость Паролей: Создание Надежных Учетных Данных',
+                'passwords_intro': 'Ваш пароль — это первая линия защиты. Используйте сложные, уникальные фразы для каждого сервиса.',
+                'passwords_table_h4': 'Сравнение Надежности Паролей',
+                'pass_col1': 'Надежность',
+                'pass_col2': 'Пример',
+                'pass_col3': 'Время Взлома (Современный GPU)',
+                'pass_very_weak': 'Очень Слабый',
+                'pass_weak': 'Слабый',
+                'pass_medium': 'Средний',
+                'pass_strong': 'Сильный',
+                'pass_excellent': 'Отличный',
+                'pass_ex1': '123456',
+                'pass_ex2': 'password123',
+                'pass_ex3': 'MyDogIsBlack',
+                'pass_ex4': 'M3d1umP@ssw0rd!',
+                'pass_ex5': 'Th1sIsAnUnbr3@kablePhraze!&7',
+                'time_instant': 'Мгновенно',
+                'time_seconds': '2 секунды',
+                'time_hours': '3 часа',
+                'time_years': '400 лет',
+                'time_billions': 'Миллиарды лет',
+                'pass_tip_h4': 'Ключевой Совет:',
+                'pass_tip_p': 'Используйте надежный <strong>Менеджер Паролей</strong> (например, LastPass или 1Password) для генерации и хранения длинных, сложных и уникальных паролей для всех ваших учетных записей.',
+                'protection_title': 'Ваша Стратегия Киберзащиты',
+                'protection_intro': 'Многоуровневая защита необходима для обеспечения максимальной безопасности.',
+                'protection_item1_h4': 'Многофакторная Аутентификация (MFA)',
+                'protection_item1_p': 'Используйте второй фактор проверки (код через приложение или SMS) на всех важных учетных записях.',
+                'protection_item2_h4': 'Антивирус и Межсетевой Экран',
+                'protection_item2_p': 'Поддерживайте актуальное антивирусное ПО и активный межсетевой экран на всех устройствах.',
+                'protection_item3_h4': 'Обновления Системы',
+                'protection_item3_p': 'Немедленно устанавливайте обновления операционной системы и приложений, чтобы закрыть дыры в безопасности.',
+                'protection_item4_h4': 'Резервное Копирование Данных',
+                'protection_item4_p': 'Регулярно создавайте резервные копии важных файлов на внешний или облачный диск.',
+                'protection_item5_h4': 'Использование VPN',
+                'protection_item5_p': 'Используйте Виртуальную Частную Сеть (VPN) для шифрования трафика, особенно в общедоступных сетях.',
+                'protection_item6_h4': 'Шифрование',
+                'protection_item6_p': 'Зашифруйте диски своего устройства (например, BitLocker или FileVault), чтобы защитить данные в случае потери или кражи.',
+                'checklist_title': 'Ваш Личный Чек-лист Безопасности',
+                'checklist_intro': 'Проверьте, выполнили ли вы эти важные шаги для защиты своей цифровой жизни:',
+                'checklist_item1': 'Включена ли многофакторная аутентификация для электронной почты и банковских операций?',
+                'checklist_item2': 'Обновлены ли антивирусные базы на этой неделе?',
+                'checklist_item3': 'Операционная система полностью обновлена?',
+                'checklist_item4': 'Все важные файлы скопированы на внешний носитель?',
+                'checklist_item5': 'Не используете ли вы повторно пароли?',
+                'resources_title': 'Полезные Ресурсы и Инструменты',
+                'resources_intro': 'Найдите надежные ресурсы для усиления вашей безопасности:',
+                'resource1_h4': 'Рекомендации по VPN',
+                'resource1_p': 'Список лучших VPN-сервисов для анонимного просмотра и шифрования данных.',
+                'resource_link1': 'Посмотреть Список',
+                'resource2_h4': 'Тест на Фишинг',
+                'resource2_p': 'Проверьте свои знания и способность распознавать фишинговые электронные письма с помощью онлайн-симуляции.',
+                'resource_link2': 'Начать Тест',
+                'resource3_h4': 'Менеджеры Паролей',
+                'resource3_p': 'Инструменты для безопасной генерации и хранения сложных, уникальных паролей.',
+                'resource_link3': 'Сравнить Менеджеры',
+                'footer_mission': 'Наша миссия — предоставить людям знания для защиты их цифровой жизни от развивающихся киберугроз.',
+                'footer_sections': 'Разделы',
+                'footer_contact': 'Контакт',
+                'disclaimer': 'Отказ от ответственности'
+            },
+            'lv': {
+                'title': 'CyberShield - Pilnīgs Aizsardzības Ceļvedis',
+                'h1': 'CyberShield',
+                'intro': 'Uzlabota aizsardzība pret kiberdraudiem. Uzziniet, kā nodrošināt savu digitālo dzīvi ar mūsu visaptverošo drošības ceļvedi.',
+                'get_protected': 'Saņemt Aizsardzību Tagad',
+                'nav_threats': 'Draudi',
+                'nav_wifi': 'WiFi Drošība',
+                'nav_bluetooth': 'Bluetooth',
+                'nav_passwords': 'Paroles',
+                'nav_protection': 'Aizsardzība',
+                'nav_checklist': 'Pārbaudes Saraksts',
+                'nav_resources': 'Resursi',
+                'why_important': 'Kāpēc Kiberdrošība ir Svarīga?',
+                'importance_text': 'Attīstoties digitālajām tehnoloģijām, palielinās arī kiberdraudu skaits. Hakeri pastāvīgi meklē ievainojamības aizsardzības sistēmās, lai iegūtu piekļuvi personas datiem, finanšu informācijai vai vienkārši nodarītu kaitējumu. Kiberdrošības pamatu pārzināšana palīdz pasargāt sevi no šādiem uzbrukumiem.',
+                'threat_level_title': 'Pašreizējais Globālais Draudu Līmenis',
+                'threat_level_low': 'Zems',
+                'threat_level_medium': 'Vidējs',
+                'threat_level_high': 'Augsts',
+                'threat_level_critical': 'Kritisks',
+                'threat_level_desc': 'Pašreizējais draudu līmenis ir <strong>AUGSTS</strong>, jo pieaug izspiedējvīrusu uzbrukumu skaits un pikšķerēšanas kampaņas, kas vērstas pret attāli strādājošiem darbiniekiem.',
+                'threats_title': 'Galvenie Draudi Internetā',
+                'threat_phishing_h3': 'Pikšķerēšana (Phishing)',
+                'threat_phishing_p': 'Krāpnieciski e-pasti un tīmekļa vietnes, kas atdarina likumīgus resursus, lai iegūtu jūsu pieteikšanās akreditācijas datus.',
+                'threat_malware_h3': 'Ļaunprātīga Programmatūra (Malware)',
+                'threat_malware_p': 'Vīrusi, Trojas zirgi, spiegprogrammatūra un izspiedējvīrusi, kas var sabojāt jūsu sistēmu vai nozagt datus.',
+                'threat_passwords_h3': 'Paroļu Uzbrukumi',
+                'threat_passwords_p': 'Vāju paroļu izmantošana vai to atkārtota izmantošana padara jūsu kontus neaizsargātus pret Brutal Force uzbrukumiem.',
+                'threat_social_h3': 'Sociālā Inženierija',
+                'threat_social_p': 'Cilvēku manipulēšana, lai iegūtu konfidenciālu informāciju vai piekļuvi sistēmām.',
+                'threat_mitm_h3': 'Vīrs-Pa-Vidam (Man-in-the-Middle)',
+                'threat_mitm_p': 'Paziņojumu pārtveršana starp divām pusēm nedrošos tīklos, piemēram, publiskajā WiFi.',
+                'threat_rogue_h3': 'Viltotas Piekļuves Punkti',
+                'threat_rogue_p': 'Viltoti Wi-Fi tīklāji, kas paredzēti jūsu datu zādzībai, kad tiem pieslēdzaties.',
+                'wifi_title': 'Publiskā WiFi Drošība: Slēptās Briesmas',
+                'wifi_intro': 'Publiskie WiFi tīkli ir viena no bīstamākajām vietām jūsu digitālajai drošībai. Uzziniet, kāpēc jums jābūt īpaši uzmanīgam, pieslēdzoties bezmaksas WiFi.',
+                'danger_alert_h3': '⚠️ BRIESMAS: Bezmaksas Publiskie WiFi Tīkli',
+                'danger_alert_p': '<strong>NEKAD neslēdzieties bezmaksas publiskam WiFi bez atbilstošas aizsardzības!</strong> Hakeri var viegli pārtvert jūsu datus, nozagt paroles, kredītkaršu informāciju un uzraudzīt visu jūsu tiešsaistes darbību.',
+                'scanner_h3': 'WiFi Tīkla Skeners',
+                'scanner_p': 'Simulēta tuvējo tīklu skenēšana, kas parāda to drošības statusu:',
+                'net_free_airport': '"Bezmaksas Lidostas WiFi"',
+                'net_starbucks': '"Starbucks Viesis"',
+                'net_hotel': '"Viesnīca_Bezmaksas_WiFi"',
+                'net_home': '"MansMājasTīkls"',
+                'signal_security_none': 'Signāls: Spēcīgs • Drošība: Nav',
+                'signal_security_wpa3': 'Signāls: Spēcīgs • Drošība: WPA3',
+                'badge_dangerous': '⚠️ BĪSTAMI',
+                'badge_secure': '✓ DROŠS',
+                'scan_again': 'Skenēt Vēlreiz',
+                'wifi_threats_h3': 'Kas var notikt publiskajā WiFi?',
+                'wifi_threat_data_h4': 'Datu Pārtveršana',
+                'wifi_threat_data_p': 'Hakeri var redzēt visu, ko jūs darāt: apmeklētās tīmekļa vietnes, ievadītās paroles, nosūtītās ziņas.',
+                'wifi_threat_financial_h4': 'Finanšu Zādzība',
+                'wifi_threat_financial_p': 'Banku akreditācijas datus un kredītkaršu numurus var nozagt, ja piekļūstat finanšu vietnēm.',
+                'wifi_threat_malware_h4': 'Ļaunprātīgas Programmatūras Ievietošana',
+                'wifi_threat_malware_p': 'Uzbrucēji var ievietot ļaunprātīgu programmatūru jūsu ierīcē caur apdraudēto tīklu.',
+                'wifi_threat_session_h4': 'Sesijas Nolaupīšana',
+                'wifi_threat_session_p': 'Jūsu aktīvās sesijas var tikt nozagtas, dodot hakeriem piekļuvi jūsu kontiem.',
+                'wifi_dos_h4': 'Pakalpojuma Atteikums (DoS)',
+                'wifi_dos_p': 'Uzbrucējs var pārpludināt tīklu, izraisot pakalpojuma atteikumu visiem pieslēgtajiem lietotājiem.',
+                'dos_do_h3': 'IETEIKUMI WiFi Drošībai',
+                'dos_do_vpn': '<strong>Izmantojiet VPN</strong> - Vienmēr pieslēdzieties, izmantojot uzticamu VPN pakalpojumu',
+                'dos_do_verify': '<strong>Pārbaudiet Tīkla Nosaukumus</strong> - Apstipriniet oficiālo tīkla nosaukumu ar personālu',
+                'dos_do_https': '<strong>Izmantojiet HTTPS</strong> - Apmeklējiet tikai tīmekļa vietnes ar HTTPS šifrēšanu',
+                'dos_do_share': '<strong>Izslēdziet Kopīgošanu</strong> - Atspējojiet failu koplietošanu un AirDrop',
+                'dos_do_mobile': '<strong>Izmantojiet Mobilos Datus</strong> - Ja iespējams, izmantojiet savu mobilo savienojumu',
+                'dos_dont_h3': 'AIZLIEGUMI WiFi Drošībai',
+                'dos_dont_banking': '<strong>Banku Darījumi</strong> - Nekad neapmeklējiet banku vai finanšu vietnes',
+                'dos_dont_auto': '<strong>Automātiska Pieslēgšanās</strong> - Neieslēdziet automātisku WiFi pieslēgšanos',
+                'dos_dont_sensitive': '<strong>Sensitīvi Dati</strong> - Neievadiet paroles vai personas informāciju',
+                'dos_dont_stay': '<strong>Palikt Pieslēgtam</strong> - Atvienojieties tūlīt pēc lietošanas',
+                'dos_dont_updates': '<strong>Programmatūras Atjauninājumi</strong> - Neinstalējiet atjauninājumus vai lietotnes, izmantojot publisko WiFi',
+                'bluetooth_title': 'Bluetooth Drošība: Kā Aizsargāt Ierīces',
+                'bluetooth_p1': 'Bluetooth ir ērts, taču tas paver vēl vienu ieejas punktu uzbrucējiem, ja tas nav pareizi konfigurēts. Šie ir pamata aizsardzības noteikumi:',
+                'bluetooth_item1': '<strong>Turiet Bluetooth Izslēgtu</strong> - Izslēdziet Bluetooth, kad to aktīvi neizmantojat.',
+                'bluetooth_item2': '<strong>Izmantojiet Drošu Savienošanu Pārī</strong> - Vienmēr pārbaudiet savienošanas pārī kodu abās ierīcēs.',
+                'bluetooth_item3': '<strong>Atspējojiet Atklāšanu</strong> - Publiski pieejamās vietās iestatiet ierīci neatklājamā režīmā.',
+                'bluetooth_item4': '<strong>Atjauniniet Programmatūru</strong> - Instalējiet jaunākos atjauninājumus, lai novērstu zināmas drošības nepilnības.',
+                'bluetooth_tip_p': 'Vecāki Bluetooth standarti (v2.0) ir mazāk droši nekā mūsdienu standarti (v4.0+). Vienmēr izmantojiet jaunāko ierīces tehnoloģiju.',
+                'passwords_title': 'Paroļu Cietoksnis: Spēcīgu Akreditācijas Datu Izveide',
+                'passwords_intro': 'Jūsu parole ir pirmā aizsardzības līnija. Katram pakalpojumam izmantojiet sarežģītas, unikālas frāzes.',
+                'passwords_table_h4': 'Paroles Stipruma Salīdzinājums',
+                'pass_col1': 'Stiprums',
+                'pass_col2': 'Piemērs',
+                'pass_col3': 'Uzlaušanas Laiks (Mūsdienu GPU)',
+                'pass_very_weak': 'Ļoti Vāja',
+                'pass_weak': 'Vāja',
+                'pass_medium': 'Vidēja',
+                'pass_strong': 'Spēcīga',
+                'pass_excellent': 'Izcila',
+                'pass_ex1': '123456',
+                'pass_ex2': 'password123',
+                'pass_ex3': 'MyDogIsBlack',
+                'pass_ex4': 'M3d1umP@ssw0rd!',
+                'pass_ex5': 'Th1sIsAnUnbr3@kablePhraze!&7',
+                'time_instant': 'Uzreiz',
+                'time_seconds': '2 sekundes',
+                'time_hours': '3 stundas',
+                'time_years': '400 gadi',
+                'time_billions': 'Miljardiem gadu',
+                'pass_tip_h4': 'Galvenais Padoms:',
+                'pass_tip_p': 'Izmantojiet uzticamu <strong>Paroļu Pārvaldnieku</strong> (piemēram, LastPass vai 1Password), lai ģenerētu un uzglabātu garas, sarežģītas un unikālas paroles visiem saviem kontiem.',
+                'protection_title': 'Jūsu Kiberdrošības Stratēģija',
+                'protection_intro': 'Daudzslāņu aizsardzība ir būtiska, lai nodrošinātu maksimālu drošību.',
+                'protection_item1_h4': 'Daudzfaktoru Autentifikācija (MFA)',
+                'protection_item1_p': 'Izmantojiet otru verifikācijas faktoru (kods caur lietotni vai SMS) visiem svarīgajiem kontiem.',
+                'protection_item2_h4': 'Pretvīruss un Ugunsmūris',
+                'protection_item2_p': 'Uzturiet atjauninātu pretvīrusu programmatūru un aktīvu ugunsmūri visās ierīcēs.',
+                'protection_item3_h4': 'Sistēmas Atjauninājumi',
+                'protection_item3_p': 'Nekavējoties instalējiet operētājsistēmas un lietojumprogrammu atjauninājumus, lai novērstu drošības nepilnības.',
+                'protection_item4_h4': 'Datu Dublēšana',
+                'protection_item4_p': 'Regulāri dublējiet svarīgos failus ārējā vai mākoņa diskā.',
+                'protection_item5_h4': 'VPN Izmantošana',
+                'protection_item5_p': 'Izmantojiet Virtuālo Privāto Tīklu (VPN) trafika šifrēšanai, īpaši publiskajos tīklos.',
+                'protection_item6_h4': 'Šifrēšana',
+                'protection_item6_p': 'Šifrējiet savu ierīces diskus (piemēram, BitLocker vai FileVault), lai aizsargātu datus nozaudēšanas vai zādzības gadījumā.',
+                'checklist_title': 'Jūsu Personīgais Drošības Pārbaudes Saraksts',
+                'checklist_intro': 'Pārbaudiet, vai esat veicis šos būtiskos pasākumus, lai nodrošinātu savu digitālo dzīvi:',
+                'checklist_item1': 'Daudzfaktoru autentifikācija ir iespējota e-pastam un bankas pakalpojumiem?',
+                'checklist_item2': 'Pretvīrusu definīcijas ir atjauninātas šonedēļ?',
+                'checklist_item3': 'Operētājsistēma ir pilnībā atjaunināta?',
+                'checklist_item4': 'Visi svarīgie faili ir dublēti ārēji?',
+                'checklist_item5': 'Vai neizmantojat atkārtoti paroles?',
+                'resources_title': 'Noderīgi Resursi un Rīki',
+                'resources_intro': 'Atrodiet uzticamus resursus savas drošības stiprināšanai:',
+                'resource1_h4': 'VPN Ieteikumi',
+                'resource1_p': 'Populārāko VPN pakalpojumu saraksts anonīmai pārlūkošanai un datu šifrēšanai.',
+                'resource_link1': 'Skatīt Sarakstu',
+                'resource2_h4': 'Pikšķerēšanas Tests',
+                'resource2_p': 'Pārbaudiet savas zināšanas un spēju atpazīt pikšķerēšanas e-pastus, izmantojot tiešsaistes simulāciju.',
+                'resource_link2': 'Sākt Testu',
+                'resource3_h4': 'Paroļu Pārvaldnieki',
+                'resource3_p': 'Rīki sarežģītu, unikālu paroļu drošai ģenerēšanai un glabāšanai.',
+                'resource_link3': 'Salīdzināt Pārvaldniekus',
+                'footer_mission': 'Mūsu misija ir dot cilvēkiem zināšanas, lai aizstāvētu savu digitālo dzīvi pret mainīgajiem kiberdraudiem.',
+                'footer_sections': 'Sadaļas',
+                'footer_contact': 'Kontakti',
+                'disclaimer': 'Atruna'
+            }
+        };
+
+        const currentLang = localStorage.getItem('lang') || 'en';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle Logic
+            const themeToggle = document.getElementById('theme-toggle');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.body.className = currentTheme + '-theme';
+            themeToggle.textContent = currentTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+
+            window.toggleTheme = () => {
+                const isDark = document.body.classList.contains('dark-theme');
+                const newTheme = isDark ? 'light' : 'dark';
+                document.body.classList.remove(isDark ? 'dark-theme' : 'light-theme');
+                document.body.classList.add(newTheme + '-theme');
+                localStorage.setItem('theme', newTheme);
+                themeToggle.textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+            };
+            
+            // Set initial theme toggle text
+            if (currentTheme === 'dark') {
+                themeToggle.textContent = '☀️ Light Mode';
+            } else {
+                themeToggle.textContent = '🌙 Dark Mode';
+            }
+
+            // Set initial language from local storage or default to English
+            document.getElementById('lang-select').value = currentLang;
+            setLanguage(currentLang);
+        });
+
+        // Simple Checklist Toggle
+        window.toggleCheck = (item) => {
+            if (item.classList.contains('checked')) {
+                item.classList.remove('checked');
+                item.classList.add('unchecked');
+                item.querySelector('i').className = 'fas fa-times-circle';
+            } else {
+                item.classList.remove('unchecked');
+                item.classList.add('checked');
+                item.querySelector('i').className = 'fas fa-check-circle';
+            }
+        };
+
+        // Simple Network Scan Simulation
+        window.scanNetworks = () => {
+            const scannerDisplay = document.getElementById('wifi-scanner');
+            const originalContent = scannerDisplay.innerHTML;
+
+            // Get translation for "Scanning..." based on current language
+            const scanningText = currentLang === 'ru' ? 'Сканирование...' : (currentLang === 'lv' ? 'Skenēšana...' : 'Scanning...');
+
+            scannerDisplay.innerHTML = `
+                <div class="network-item">${scanningText} <i class="fas fa-spinner fa-spin"></i></div>
+            `;
+            setTimeout(() => {
+                scannerDisplay.innerHTML = originalContent;
+                // Re-apply language after scan animation finishes
+                setLanguage(document.getElementById('lang-select').value, true); 
+            }, 1500);
+        };
+
+        // Localization function
+        window.setLanguage = (lang, skipLocalStorageUpdate = false) => {
+            const elements = document.querySelectorAll('[data-translate-key]');
+            const langData = translations[lang];
+
+            if (!langData) return;
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                if (langData[key]) {
+                    // Check if content contains strong tag (for localization of bold text within translations)
+                    if (langData[key].includes('<strong>')) {
+                        element.innerHTML = langData[key];
+                    } else {
+                        element.textContent = langData[key];
+                    }
+                }
+            });
+            
+            if (!skipLocalStorageUpdate) {
+                localStorage.setItem('lang', lang);
+                // Update HTML lang attribute (Important for accessibility/SEO)
+                document.documentElement.lang = lang;
+            }
+        };
+    </script>
+</body>
+</html>
